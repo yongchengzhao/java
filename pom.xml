@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tengyun</groupId>
-	<artifactId>java</artifactId>
+	<artifactId>practice-java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>java-test</name>
 	<description>Practice Java.</description>
