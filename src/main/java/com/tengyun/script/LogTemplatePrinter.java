@@ -18,8 +18,6 @@ public class LogTemplatePrinter {
 
     private String taskPrefix = "- [ ] ";
 
-    private LogTemplatePrinter(){}
-
     public void printWeekInfo(int week){
         System.out.println("### " + year + "年第" + week + "周\n\nTasks:\n");
     }
