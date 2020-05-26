@@ -1,23 +1,24 @@
 package com.tengyun.script;
 
-import javax.validation.constraints.Null;
+import lombok.Data;
 
 /**
  * @author Adam
  */
+@Data
 public class LogTemplatePrinter {
 
-    public int year = 2020;
+    private int year = 2020;
 
-    public int weekStart = 1;
+    private int weekStart = 1;
 
-    public int weekEnd = 52;
+    private int weekEnd = 52;
 
-    public int perWeekWalk = 12;
+    private int perWeekWalk = 12;
 
-    public String taskPrefix = "- [ ] ";
+    private String taskPrefix = "- [ ] ";
 
-    public LogTemplatePrinter(){}
+    private LogTemplatePrinter(){}
 
     public void printWeekInfo(int week){
         System.out.println("### " + year + "年第" + week + "周\n\nTasks:\n");
