@@ -13,6 +13,8 @@ public class LogTemplatePrinter {
 
     public int weekEnd = 52;
 
+    public int perWeekWalk = 12;
+
     public String taskPre = "- [ ] ";
 
     public LogTemplatePrinter(){}
@@ -30,14 +32,12 @@ public class LogTemplatePrinter {
 
     public void printWalkInfo(int week){
         int amount = 0;
-        if (week <= 22){
-        }
-        else if (week <= 36){
-            int perWeek = (12 * 36) / (36 - 22);
+        if (week >= 22 && week <= 36){
+            int perWeek = (perWeekWalk * 36) / (36 - 22);
             System.out.println(taskPre + (week - 22) * perWeek + "km.\n");
         }
         else if (week <= 52){
-            System.out.println(taskPre + week * 12 + "km.\n");
+            System.out.println(taskPre + week * perWeekWalk + "km.\n");
         }
     }
 
