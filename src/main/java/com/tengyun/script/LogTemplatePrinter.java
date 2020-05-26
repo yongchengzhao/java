@@ -2,6 +2,8 @@ package com.tengyun.script;
 
 import lombok.Data;
 
+import java.util.Calendar;
+
 /**
  * @author Adam
  */
@@ -10,9 +12,11 @@ public class LogTemplatePrinter {
 
     private int year = 2020;
 
-    private int weekStart = 1;
+    private int month = Calendar.JANUARY;
 
-    private int weekEnd = 52;
+    private int date = 1;
+
+    private int firstDayOfWeek = Calendar.MONDAY;
 
     private int perWeekWalk = 12;
 
@@ -23,10 +27,15 @@ public class LogTemplatePrinter {
     }
 
     public void printLogTemplate(){
-        for (int i = weekStart; i < weekEnd + 1; i++){
+        Calendar cld = Calendar.getInstance();
+        cld.set(year, month, date);
+        cld.setFirstDayOfWeek(firstDayOfWeek);
+
+        for (int i = cld.get(Calendar.WEEK_OF_YEAR); i < cld.getWeeksInWeekYear() + 1; i++){
             printWeekInfo(i);
             printWalkInfo(i);
         }
+        System.out.println(cld.getTime());
     }
 
     public void printWalkInfo(int week){
@@ -43,7 +52,9 @@ public class LogTemplatePrinter {
     public static void main(String[] args) {
         System.out.println("----------main----------");
         LogTemplatePrinter ltp = new LogTemplatePrinter();
-        ltp.weekStart = 22;
+        ltp.setMonth(Calendar.MAY);
+        ltp.setDate(26);
+
         ltp.printLogTemplate();
     }
 }
