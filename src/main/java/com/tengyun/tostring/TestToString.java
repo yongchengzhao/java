@@ -27,9 +27,9 @@ class Person {
 
     @Override
     public String toString() {
-        return "Person["
-                + "name=" + this.name
-                + ", age=" + this.age
-                + "]";
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
