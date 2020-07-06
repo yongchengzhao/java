@@ -11,7 +11,7 @@ public class ArrayTest {
     /**
      * 遍历数组。
      */
-    private static void traversalArray() {
+    public static void traversalArray() {
         int[][] intInt = new int[4][2];
         System.out.println(intInt.length);
         System.out.println(intInt[0].length);
@@ -27,7 +27,7 @@ public class ArrayTest {
     /**
      * 初始化二维数组。
      */
-    private static void initTwoDimensionArray() {
+    public static void initTwoDimensionArray() {
         int[][] intB = new int[][]{new int[]{1, 1, 1}, new int[]{2, 2, 2}, new int[]{3, 3, 3}};
         for (int[] arr: intB){
             for (int ii : arr) {
