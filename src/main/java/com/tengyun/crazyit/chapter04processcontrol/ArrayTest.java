@@ -5,7 +5,7 @@ package com.tengyun.crazyit.chapter04processcontrol;
  */
 public class ArrayTest {
     public static void main(String[] args) {
-        initTwoDimensionArray();
+        traversalArray();
     }
 
     /**
@@ -15,6 +15,16 @@ public class ArrayTest {
         int[][] intInt = new int[4][2];
         System.out.println(intInt.length);
         System.out.println(intInt[0].length);
+
+        // 遍历数组前练习一下基本类型局部变量的赋值。
+        // 0
+        System.out.println(intInt[2][1]);
+        int newInt = intInt[2][1];
+        // 0
+        System.out.println(newInt);
+        intInt[2][1] = 666;
+        // 0
+        System.out.println(newInt);
 
         for (int[] intArray : intInt) {
             for (int anInt : intArray) {
