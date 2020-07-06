@@ -16,4 +16,17 @@ public class ArrayTest {
             System.out.println();
         }
     }
+
+    /**
+     * 初始化二维数组。
+     */
+    private static void initTwoDimensionArray() {
+        int[][] intB = new int[][]{new int[]{1, 1, 1}, new int[]{2, 2, 2}, new int[]{3, 3, 3}};
+        for (int[] arr: intB){
+            for (int ii : arr) {
+                System.out.print(ii + ",");
+            }
+            System.out.println();
+        }
+    }
 }
