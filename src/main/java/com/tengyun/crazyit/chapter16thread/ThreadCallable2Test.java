@@ -23,7 +23,7 @@ public class ThreadCallable2Test {
             }
         })).start();
 
-        int mainPrintTime  = 100;
+        int mainPrintTime = 100;
         for (int i = 0; i < mainPrintTime; i++) {
             System.out.println(Thread.currentThread().getName() + "******" + i);
         }

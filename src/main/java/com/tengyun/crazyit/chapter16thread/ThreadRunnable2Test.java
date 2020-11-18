@@ -9,14 +9,14 @@ public class ThreadRunnable2Test {
             @Override
             public void run() {
                 int printTime = 100;
-                for (int i = 0; i < printTime; i ++) {
+                for (int i = 0; i < printTime; i++) {
                     System.out.println(Thread.currentThread().getName() + "*****" + i);
                 }
             }
         }).start();
 
         int mainPrintTime = 100;
-        for (int i = 0; i < mainPrintTime; i ++) {
+        for (int i = 0; i < mainPrintTime; i++) {
             System.out.println(Thread.currentThread().getName() + "----" + i);
         }
     }

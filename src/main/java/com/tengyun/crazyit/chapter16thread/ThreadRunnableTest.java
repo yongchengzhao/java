@@ -11,7 +11,7 @@ public class ThreadRunnableTest {
         new Thread(tr).start();
 
         int mainPrintTime = 100;
-        for (int i = 0; i < mainPrintTime; i ++) {
+        for (int i = 0; i < mainPrintTime; i++) {
             System.out.println(Thread.currentThread().getName() + "***" + i);
         }
     }
@@ -20,8 +20,8 @@ public class ThreadRunnableTest {
 class ThreadRunnable implements Runnable {
     @Override
     public void run() {
-        int printTime =100;
-        for (int i = 0; i < printTime; i ++) {
+        int printTime = 100;
+        for (int i = 0; i < printTime; i++) {
             System.out.println(Thread.currentThread().getName() + "***    " + i);
         }
     }
